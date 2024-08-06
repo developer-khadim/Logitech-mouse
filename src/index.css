@@ -2,10 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.back-img {
+.back-img{
     background-image: url('/src/assets/bg.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.9);
+}
+.back-img-about{
+    background-image: url('/src/assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.back-img-pro{
+    background-image: url('/src/assets/probgimg.png');
+    background-size: auto 2340px;
+    background-position: top;
+    background-blend-mode: multiply;
+    background-color: #2D2D2D;
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './pages/About';
-import Mouse from './assets/image.png';
+import Mouseimg from './components/Mouseimg';
+import Product from './components/Product';
 
 const Home = () => {
   return (
@@ -11,11 +12,14 @@ const Home = () => {
         <Header/>
         <Hero/>
       </section>
-      <section className='back-img'>
+      <section className='back-img-about'>
         <About/>
       </section>
       <section>
-        <img src={Mouse} alt="Mouse" />
+       <Mouseimg/>
+      </section>
+      <section className='w-full h-auto back-img-pro' >
+        <Product/>
       </section>
     </>
   )

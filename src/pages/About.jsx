@@ -29,7 +29,9 @@ const About = () => {
               sensor. it’s a multifaceted battle weapon that lets you play
               longer, play button, and make your play.
             </p>
+            <div className="md:text-start text-center " >
             <Button text="Buy" />
+            </div>
           </div>
           {/* right */}
           <div className="w-full lg:w-auto flex justify-center lg:justify-end">

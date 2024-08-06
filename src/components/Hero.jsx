@@ -33,7 +33,9 @@ const Hero = () => {
               wireless, HERO 16k sensor, and 240 hour battery life to be the
               fastest gunslinger on the battlefield
             </p>
+            <div className="md:text-start text-center " >
             <Button text="PLAY ADVANCED" />
+            </div>
           </div>
           {/* right */}
           <div className="w-full lg:w-auto flex justify-center lg:justify-end">
