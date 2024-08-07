@@ -41,7 +41,7 @@ const Product = () => {
         Products
       </div>
       <div className="flex justify-center w-full">
-        <div className="flex flex-col lg:flex-row items-start justify-between w-full max-w-[98vw]">
+        <div className="flex flex-col lg:flex-row items-start justify-between  w-full max-w-[98vw]">
           {/* Left Decorations */}
           <div className="hidden lg:flex items-center gap-5 lg:mb-0">
             <img src={dots} alt="dots" />
@@ -80,8 +80,8 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-10 ">
-        <Button text="Buy NOW" />
+      <div className="text-center py-20 ">
+        <Button text="Buy NOW"  />
       </div>
     </section>
   );

@@ -4,8 +4,7 @@ import Hero from './components/Hero'
 import About from './pages/About';
 import Mouseimg from './components/Mouseimg';
 import Product from './components/Product';
-import Pro from './components/Pro'
-
+import Specification from './components/Specification';
 const Home = () => {
   return (
     <>
@@ -21,7 +20,9 @@ const Home = () => {
       </section>
       <section className=' back-img-pro' >
         <Product/>
-        {/* <Pro/> */}
+      </section>
+      <section className='bg-black/90 w-full h-[100vh]' >
+      <Specification/>
       </section>
     </>
   )
