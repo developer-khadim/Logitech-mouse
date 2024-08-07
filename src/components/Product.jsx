@@ -41,15 +41,15 @@ const Product = () => {
         Products
       </div>
       <div className="flex justify-center w-full">
-        <div className="flex flex-col lg:flex-row items-start justify-between  w-full max-w-[98vw]">
+        <div className="flex flex-col lg:flex-row items-start justify-between w-full max-w-[98vw]">
           {/* Left Decorations */}
-          <div className="hidden lg:flex items-center gap-5 lg:mb-0">
+          <div className="hidden lg:flex items-center gap-5">
             <img src={dots} alt="dots" />
             <img src={leftline} alt="LeftLine" />
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col space-y-16 lg:space-y-10 w-full lg:w-2/4">
+          <div className="flex flex-col space-y-12 md:space-y-16 lg:space-y-10 w-full lg:w-2/4">
             {products.map((product, index) => (
               <div
                 key={index}
@@ -58,33 +58,31 @@ const Product = () => {
                 <img
                   src={productImages[index]}
                   alt={`pro${index + 1}`}
-                  className= {`w-[75%] md:w-2/5 lg:w-[20vw] ${index>= 1 ? 'lg:w-[25vw]' : 'lg:w-[20vw]'} auto `}
+                  className={`w-full md:w-2/5 lg:w-[20vw] ${index >= 1 ? "lg:w-[25vw]" : "lg:w-[20vw]"}
+                  `}
                 />
                 <div className="md:w-[500px] text-center md:text-left">
                   <h2 className="font-bold text-2xl lg:text-3xl mb-4">
                     {product.title}
                   </h2>
-                  <p className="text-sm lg:text-base">
-                    {product.description}
-                  </p>
+                  <p className="text-sm lg:text-base">{product.description}</p>
                 </div>
               </div>
             ))}
-            
           </div>
 
           {/* Right Decorations */}
-          <div className="hidden lg:flex items-center gap-5 lg:mb-0">
+          <div className="hidden lg:flex items-center gap-5">
             <img src={rightline} alt="Right line" />
             <img src={icon} alt="Icon" />
           </div>
         </div>
       </div>
-      <div className="text-center py-20 ">
-        <Button text="Buy NOW"  />
+      <div className="flex justify-center py-10 md:py-20 w-full">
+        <Button text="Buy NOW" />
       </div>
     </section>
   );
-}
+};
 
-export default Product
+export default Product;

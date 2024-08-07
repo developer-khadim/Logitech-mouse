@@ -21,7 +21,7 @@ const Home = () => {
       <section className=' back-img-pro' >
         <Product/>
       </section>
-      <section className='bg-black/90 w-full h-[100vh]' >
+      <section className='bg-black/90 w-full h-auto' >
       <Specification/>
       </section>
     </>
