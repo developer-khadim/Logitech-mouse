@@ -8,57 +8,83 @@ import pro4 from "../assets/pro4.png";
 import leftline from "../assets/proleftline.png";
 import rightline from "../assets/prorightline.png";
 import icon from "../assets/social.png";
-import centerline from "../assets/centerline.svg";
 
+const products = [
+  {
+    title: "15 Programmable Control",
+    description:
+      "Program, refine, and win. Master your arsenal in battle royale, MMO, and MOBA gameplay with tactically positioned controls in optimal quantity and configuration. Refine and align keybinds, perfect your commands and win.",
+  },
+  {
+    title: "Dual Connectivity with Lightspeed",
+    description:
+      "One click lets you toggle between ultra-fast 1ms LIGHTSPEED wireless and Bluetooth even across two separate machines.",
+  },
+  {
+    title: "Hero 16k Sensor",
+    description:
+      "Experience precision with the HERO 16K sensor, which provides ultra-fast tracking and accuracy, making it perfect for competitive gameplay.",
+  },
+  {
+    title: "Spin, Ratchet, Switch",
+    description:
+      "A durable metal scroll wheel switches between hyper-fast and ratcheted scrolling. Fly through menus, ratchet through weapon and spell selections, or apply keybinds to up and down inputs.",
+  },
+];
 
-const ProductInfo = ({ title, description }) => (
-    <div className="w-full md:w-[320px] mb-[350px]">
-      <h1 className="text-white font-bold text-xl">{title}</h1>
-      <p className="text-white text-sm py-2">{description}</p>
-    </div>
-  );
-  
-  const Product = () => (
-    <section className="w-auto h-[2420px]">
-      <h1 className="text-[45px] font-semibold text-white text-center pt-20">Products</h1>
-      <div className="w-full flex flex-col md:flex-row justify-between items-center">
-        <div className="flex w-full md:w-[5%] items-center gap-5 pl-5">
-          <img src={dots} alt="dots" />
-          <img src={leftline} alt="leftline" />
-        </div>
-        <div className="w-full md:w-[43%] h-[2000px] flex flex-col items-center">
-          {[pro1, pro2, pro3, pro4].map((img, index) => (
-            <img key={index} src={img} alt={`pro${index + 1}`} className={index > 1 ? "mt-16" : ""} />
-          ))}
-        </div>
-        <img src={centerline} alt="" />
-        <div className="w-full md:w-[44%] flex flex-col items-center mt-[320px]">
-          <ProductInfo
-            title="15 programmable control"
-            description="Program, refine, and win. Master your arsenal in battle royale, MMO, and MOBA gameplay with tactically positioned controls in optimal quantity and configuration."
-          />
-          <ProductInfo
-            title="Dual connectivity with lightspeed"
-            description="One click lets you toggle between ultra-fast 1ms LIGHTSPEED wireless and Bluetooth even across two separate machines."
-          />
-          <ProductInfo  
-            title={<>hero <span className="text-active">16K</span> sensor</>}
-            description="One click lets you toggle between ultra-fast 1ms LIGHTSPEED wireless and Bluetooth even across two separate machines."
-          />
-          <ProductInfo
-            title="Spin, ratchet, switch"
-            description="A durable metal scroll wheel switches between hyper-fast and ratcheted scrolling. Fly through menus, ratchet through weapon and spell selections, or apply keybinds to up and down inputs."
-          />
-        </div>
-        <div className="flex items-center gap-5 pr-5">
-          <img src={rightline} alt="rightline" />
-          <img src={icon} alt="icon" />
+const productImages = [pro1, pro2, pro3, pro4];
+
+const Product = () => {
+  return (
+    <section className="text-white w-full px-4 lg:px-0">
+      <div className="text-center text-active text-4xl font-bold py-5">
+        Products
+      </div>
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col lg:flex-row items-start justify-between w-full max-w-[98vw]">
+          {/* Left Decorations */}
+          <div className="hidden lg:flex items-center gap-5 lg:mb-0">
+            <img src={dots} alt="dots" />
+            <img src={leftline} alt="LeftLine" />
+          </div>
+
+          {/* Main Content */}
+          <div className="flex flex-col space-y-16 lg:space-y-10 w-full lg:w-2/4">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="flex flex-col md:flex-row items-center justify-between gap-8"
+              >
+                <img
+                  src={productImages[index]}
+                  alt={`pro${index + 1}`}
+                  className= {`w-[75%] md:w-2/5 lg:w-[20vw] ${index>= 1 ? 'lg:w-[25vw]' : 'lg:w-[20vw]'} auto `}
+                />
+                <div className="md:w-[500px] text-center md:text-left">
+                  <h2 className="font-bold text-2xl lg:text-3xl mb-4">
+                    {product.title}
+                  </h2>
+                  <p className="text-sm lg:text-base">
+                    {product.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+            
+          </div>
+
+          {/* Right Decorations */}
+          <div className="hidden lg:flex items-center gap-5 lg:mb-0">
+            <img src={rightline} alt="Right line" />
+            <img src={icon} alt="Icon" />
+          </div>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center mt-10 ">
         <Button text="Buy NOW" />
       </div>
     </section>
   );
-  
-  export default Product;
+}
+
+export default Product

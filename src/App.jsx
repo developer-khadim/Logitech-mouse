@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './pages/About';
 import Mouseimg from './components/Mouseimg';
 import Product from './components/Product';
+import Pro from './components/Pro'
 
 const Home = () => {
   return (
@@ -18,8 +19,9 @@ const Home = () => {
       <section>
        <Mouseimg/>
       </section>
-      <section className='w-full h-auto back-img-pro' >
+      <section className=' back-img-pro' >
         <Product/>
+        {/* <Pro/> */}
       </section>
     </>
   )
