@@ -31,10 +31,10 @@ const Header = () => {
             <img src={logo} className="w-40 h-auto lg:w-48 lg:h-auto" alt="Logo" />
           </div>
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#Home" className={linkClass('#Home')} onClick={handleLinkClick}>Home</a>
-            <a href="#About" className={linkClass('#About')} onClick={handleLinkClick}>About</a>
-            <a href="#Product" className={linkClass('#Product')} onClick={handleLinkClick}>Product</a>
-            <a href="#Specification" className={linkClass('#Specification')} onClick={handleLinkClick}>Specification</a>
+            <a href="#Home" className={`${linkClass('#Home')} hover:text-active`} onClick={handleLinkClick}>Home</a>
+            <a href="#About" className={`${linkClass('#About')} hover:text-active`} onClick={handleLinkClick}>About</a>
+            <a href="#Product" className={`${linkClass('#Product')} hover:text-active`} onClick={handleLinkClick}>Product</a>
+            <a href="#Specification" className={`${linkClass('#Specification')} hover:text-active`} onClick={handleLinkClick}>Specification</a>
           </div>
           <div className="lg:hidden">
             <button

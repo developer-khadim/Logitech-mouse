@@ -5,6 +5,7 @@ import About from './pages/About';
 import Mouseimg from './components/Mouseimg';
 import Product from './components/Product';
 import Specification from './components/Specification';
+import Footer from './components/Footer';
 const Home = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const Home = () => {
       </section>
       <section className='bg-black/90 w-full h-auto' >
       <Specification/>
+      <Footer/>
       </section>
     </>
   )

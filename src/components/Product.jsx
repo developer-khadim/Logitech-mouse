@@ -37,7 +37,7 @@ const productImages = [pro1, pro2, pro3, pro4];
 const Product = () => {
   return (
     <section className="text-white w-full px-4 lg:px-0">
-      <div className="text-center text-active text-4xl font-bold py-5">
+      <div className="text-2xl text-center md:text-3xl font-bold py-10 uppercase">
         Products
       </div>
       <div className="flex justify-center w-full">
@@ -58,14 +58,14 @@ const Product = () => {
                 <img
                   src={productImages[index]}
                   alt={`pro${index + 1}`}
-                  className={`w-full md:w-2/5 lg:w-[20vw] ${index >= 1 ? "lg:w-[25vw]" : "lg:w-[20vw]"}
+                  className={`w-full md:w-2/5 lg:w-[22vw] }
                   `}
                 />
                 <div className="md:w-[500px] text-center md:text-left">
-                  <h2 className="font-bold text-2xl lg:text-3xl mb-4">
+                  <h2 className="font-bold text-xl text-active mb-4">
                     {product.title}
                   </h2>
-                  <p className="text-sm lg:text-base">{product.description}</p>
+                  <p className="text-sm lg:text-base text-gray-300">{product.description}</p>
                 </div>
               </div>
             ))}
