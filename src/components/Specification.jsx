@@ -144,7 +144,12 @@ const Specification = () => (
                 {spec.title}
               </h2>
               {spec.details.map((detail, index) => (
-                <p key={index}>{detail.value}</p>
+                <p key={index}>
+                  {detail.label ? (
+                    <span className="text-white font-semibold">{detail.label} :</span>
+                  ) : null}{" "}
+                  {detail.value}
+                </p>
               ))}
             </div>
           ))}

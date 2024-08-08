@@ -23,8 +23,7 @@ const Header = () => {
   `;
 
   return (
-  
-     <nav className="h-[100px] xl:w-full  w-[90vw]">
+    <nav className="h-[100px] xl:w-full w-[90vw]">
       <div className="container mx-4 xl:mx-auto xl:px-10 h-full">
         <div className="flex items-center justify-between h-full">
           <div className="flex items-center flex-shrink-0 text-white">
@@ -47,13 +46,46 @@ const Header = () => {
         </div>
       </div>
       {/* Mobile menu */}
-      <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-red-400 absolute top-[100px] left-0 w-full`}>
-        <div className="flex flex-col items-center py-4 space-y-4">
-          <a href="#Home" className={linkClass('#Home')} onClick={handleLinkClick}>Home</a>
-          <a href="#About" className={linkClass('#About')} onClick={handleLinkClick}>About</a>
-          <a href="#Product" className={linkClass('#Product')} onClick={handleLinkClick}>Product</a>
-          <a href="#Specification" className={linkClass('#Specification')} onClick={handleLinkClick}>Specification</a>
+      <div
+        className={`lg:hidden fixed inset-0 z-50 bg-black transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <a
+            href="#Home"
+            className={`${linkClass('#Home')} hover:text-active`}
+            onClick={handleLinkClick}
+          >
+            Home
+          </a>
+          <a
+            href="#About"
+            className={`${linkClass('#About')} hover:text-active`}
+            onClick={handleLinkClick}
+          >
+            About
+          </a>
+          <a
+            href="#Product"
+            className={`${linkClass('#Product')} hover:text-active`}
+            onClick={handleLinkClick}
+          >
+            Product
+          </a>
+          <a
+            href="#Specification"
+            className={`${linkClass('#Specification')} hover:text-active`}
+            onClick={handleLinkClick}
+          >
+            Specification
+          </a>
         </div>
+        {/* Close Button */}
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-6 right-6 text-white text-4xl hover:text-active"
+        >
+          &times;
+        </button>
       </div>
     </nav>
   );
